@@ -442,6 +442,7 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #333333;
+  outline: none;
 }
 
 .search__button {
