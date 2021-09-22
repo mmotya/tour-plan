@@ -655,7 +655,7 @@ template {
     margin-left: auto;
   }
   .navbar-menu {
-    padding-top: 22px;
+    padding-top: 19px;
     padding-bottom: 23px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -670,6 +670,16 @@ template {
   }
   .search__input {
     width: 340px;
+  }
+  .user {
+    margin-left: 26px;
+  }
+  .rating {
+    min-height: 46px;
+  }
+  .hotel-info__offer {
+    margin-left: 15px;
+    margin-top: 5px;
   }
 }
 
