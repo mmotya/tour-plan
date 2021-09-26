@@ -878,6 +878,7 @@ template {
   height: 55px;
   border-radius: 4px;
   overflow: hidden;
+  background-color: #fff;
 }
 
 .subscribe__input {
@@ -911,7 +912,7 @@ template {
 }
 
 .activities {
-  padding: 20px 0 98px 0;
+  padding: 95px 0 98px 0;
 }
 
 .activities__title {
@@ -1058,7 +1059,7 @@ template {
 
 .reviews-slider__button {
   position: absolute;
-  top: 37%;
+  top: 46%;
   -webkit-transform: translateY(-51%);
           transform: translateY(-51%);
   width: 30px;
@@ -1605,14 +1606,13 @@ template {
     margin-bottom: 20px;
   }
   .hotel-slider__button {
-    height: 7px;
-    width: 4px;
+    background-size: 4px;
   }
   .hotel-slider__button--next {
-    right: 11px;
+    right: 0px;
   }
   .hotel-slider__button--prev {
-    left: 9px;
+    left: 0px;
   }
   .booking {
     width: 100%;
