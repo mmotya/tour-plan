@@ -8,29 +8,6 @@
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
-      <script src="https://api-maps.yandex.ru/2.1/?apikey=7a034dc0-622c-4b26-b58a-31ce4d5f121c&lang=ru_RU" type="text/javascript">
-      </script>
-      <script type="text/javascript">
-    // Функция ymaps.ready() будет вызвана, когда
-    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-    ymaps.ready(init);
-    function init(){
-        // Создание карты.
-        var myMap = new ymaps.Map("map", {
-            // Координаты центра карты.
-            // Порядок по умолчанию: «широта, долгота».
-            // Чтобы не определять координаты центра карты вручную,
-            // воспользуйтесь инструментом Определение координат.
-            center: [37.776108, -122.417339],
-            // Уровень масштабирования. Допустимые значения:
-            // от 0 (весь мир) до 19.
-            zoom: 15
-             
-        });
-        var placemark=new ymaps.Placemark ([37.776108, -122.417339]);
-        myMap.geoObjects.add(placemark);
-    }
-</script>
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -203,9 +180,11 @@
          <!-- /.booking__call-center -->
          <button class="button booking__button">View Other Options</button>
        </div>
-       <!-- /.booking -->
-       <div id="map" class="map" style= "height:213px; border:0px;"></div>
-       </div>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2467.0675624231767!2d-122.41607498714083!3d37.77780768837536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c96500e0b%3A0x8bcd843d2e00e690!2sBEI%20Hotel%20San%20Francisco%2C%20Trademark%20Collection%20by%20Wyndham!5e0!3m2!1sru!2sru!4v1632433669065!5m2!1sru!2sru"
+              width="347" height="213" style="border:0;width: 100%;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
        <!-- /.map -->
       </div>
        <!-- /.hotel-right-->

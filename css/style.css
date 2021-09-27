@@ -909,6 +909,7 @@ template {
   font-size: 12px;
   line-height: 15px;
   overflow: hidden;
+  border-radius: 0px;
 }
 
 .activities {
@@ -1606,7 +1607,7 @@ template {
     margin-bottom: 20px;
   }
   .hotel-slider__button {
-    background-size: 4px;
+    background-size: 6px;
   }
   .hotel-slider__button--next {
     right: 0px;
