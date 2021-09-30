@@ -68,11 +68,11 @@
   .reviews
     padding-bottom: 12px
   .footer
-    padding-top: 72px
+    padding-top: 70px
     padding-bottom: 14px
     &-wrapper
       grid-template-columns: repeat(14, 1fr )
-      grid-gap: 50px 0px
+      grid-gap: 47px 0px
       padding-bottom: 43px
     &__text
       &--p
@@ -104,7 +104,7 @@
       &-details
         grid-column: span 10
         grid-row: 3
-        padding-top: 9px
+        padding-top: 14px
       &-form
         grid-column: span 11
         grid-row: 4
@@ -117,7 +117,7 @@
       &--mb-2
         margin-bottom: 12px
       &--mb-5
-        margin-bottom: 5px
+        margin-bottom: 7px
     &__input
       flex-basis: 47%
     &__form
@@ -202,17 +202,6 @@
   body
     padding-top: 70px
   .navbar
-    &__user, &__search
-      &--mobile
-        &_hidden
-          display: none
-        &_visible
-          display: flex
-          margin-left: 2px
-    &__user
-      flex-direction: column
-      justify-content: center
-
     &-bottom
       display: none
       position: fixed
@@ -223,11 +212,22 @@
       padding-top: 13px
       &--visible
         display: block
+    &__user, &__search
+      &_mobile
+        &_hidden
+          display: none
+        &_visible
+          display: flex
+          margin-left: 2px
+    &__user
+      flex-direction: column
+      justify-content: center
+
     &-menu
       flex-direction: column
       &__item
         margin-bottom: 20px
-        &--mobile
+        &_mobile
           &_visible
             display: block
     &--mobile
@@ -408,21 +408,21 @@
     &__image
       display: flex
       align-items: flex-start
-    body
-      padding-top: 78px
+  body
+    padding-top: 70px
   .navbar
     &-top
       padding-bottom: 29px
       padding-top: 28px
     &__user
-      &--mobile
+      &_mobile
         &_hidden
           display: none
         &_visible
           display: flex
           margin-bottom: 0px
     &__search
-      &--mobile
+      &_mobile
         &_hidden
           display: none
         &_visible
@@ -441,7 +441,7 @@
       flex-direction: column
       &__item
         margin-bottom: 16px
-        &--mobile
+        &_mobile
           &_visible
             display: block
             margin-bottom: 27px
@@ -538,7 +538,7 @@
         flex-wrap: wrap
         align-content: space-between
         padding-top: 40px
-        padding-bottom: 30px
+        padding-bottom: 26px
     &__title
       margin: 0px 0px 16px 0px
       &--inline
