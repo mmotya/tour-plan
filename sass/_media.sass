@@ -69,6 +69,7 @@
     padding-bottom: 12px
   .footer
     padding-top: 72px
+    padding-bottom: 14px
     &-wrapper
       grid-template-columns: repeat(14, 1fr )
       grid-gap: 50px 0px
@@ -344,11 +345,11 @@
       padding-left: 0px
     &__contacts
       &-details
-        grid-column: span 2
+        grid-column: span 3
         grid-row: 3
         padding-top: 0px
       &-form
-        grid-column: span 2
+        grid-column: span 3
         grid-row: 4
     &__input
       flex-basis: 100%
@@ -440,6 +441,7 @@
     padding-bottom: 39px
   .footer
     padding-top: 69px
+    padding-bottom: 20px
     &-wrapper
       grid-template-columns: 1fr
       grid-auto-rows: minmax(68px, min-content)
@@ -499,11 +501,19 @@
         grid-column: 1
     &__form
       padding-right: 0
-      flex-direction: row-reverse
     &__input
       height: 50px
     &__message
-      padding-bottom: 39px
+      padding-bottom: 17px
+      margin-bottom: 15px
+    &__button
+      order: 2
+
+    &__info
+      order: 1
+      min-width: 280px
+
+      margin-bottom: 15px
     &__bottom
       flex-wrap: wrap
     &-list
