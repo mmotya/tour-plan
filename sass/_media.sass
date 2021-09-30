@@ -13,6 +13,9 @@
   .card
     width: 230px
     height: 230px
+  .footer
+    &__input
+      flex-basis: 100%
 
 @media ( max-width: 992px  )
   .container
@@ -54,6 +57,7 @@
     width: 340px
   .activities
     padding-top: 10px
+    padding-bottom: 50px
     &-wrapper
       flex-wrap: wrap
     &__card
@@ -63,6 +67,65 @@
     height: 255px
   .reviews
     padding-bottom: 12px
+  .footer
+    padding-top: 72px
+    &-wrapper
+      grid-template-columns: repeat(14, 1fr )
+      grid-gap: 50px 0px
+      padding-bottom: 43px
+    &__text
+      &--p
+        font-size: 14px
+        line-height: 21px
+    &__input
+      flex-basis: 49%
+    &__logo
+      width: 97px
+      grid-row: 1/2
+      grid-column: span 3
+    &__social
+      &-network
+        grid-row: 1/2
+        grid-column: span 7
+        align-self: center
+        align-content: space-between
+        padding-left: 38px
+        padding-top: 15px
+    &__categories
+      grid-row: 2/3
+      grid-column: span 4
+    &__additional
+      grid-column: span 6
+    &__legal
+      grid-column: span 4
+      padding-left: 0px
+    &__contacts
+      &-details
+        grid-column: span 10
+        grid-row: 3
+        padding-top: 9px
+      &-form
+        grid-column: span 11
+        grid-row: 4
+    &__icon
+      padding-left: 9px
+      padding-top: 6px
+      &-wrapper
+        min-width: 44px
+    &__item
+      &--mb-2
+        margin-bottom: 12px
+      &--mb-5
+        margin-bottom: 5px
+    &__input
+      flex-basis: 47%
+    &__form
+      padding-right: 11px
+    &__bottom
+      justify-content: space-between
+    &-list
+      margin-right: 0
+
 @media (max-width: 768px)
   .container, .newsletter-wrapper
     max-width: 700px
@@ -253,6 +316,42 @@
       line-height: 20px
     &__imagethe
       margin-bottom: 28px
+  .footer
+    &-wrapper
+      grid-template-columns: repeat(3, 1fr )
+      grid-gap: 50px 8px
+    &__input
+      flex-basis: 49%
+    &__logo
+      width: 97px
+      grid-row: 1/2
+      grid-column: span 1
+    &__social
+      &-network
+        grid-row: 1/2
+        grid-column: span 2
+        align-self: center
+        align-content: space-between
+        padding-left: 0px
+        padding-top: 0px
+    &__categories
+      grid-row: 2/3
+      grid-column: span 1
+    &__additional
+      grid-column: span 1
+    &__legal
+      grid-column: span 1
+      padding-left: 0px
+    &__contacts
+      &-details
+        grid-column: span 2
+        grid-row: 3
+        padding-top: 0px
+      &-form
+        grid-column: span 2
+        grid-row: 4
+    &__input
+      flex-basis: 100%
 
 @media (max-width: 480px) and (min-width: 320px)
   .container
@@ -337,3 +436,78 @@
       margin-right: auto
   .card
     width: 100%
+  .activities
+    padding-bottom: 39px
+  .footer
+    padding-top: 69px
+    &-wrapper
+      grid-template-columns: 1fr
+      grid-auto-rows: minmax(68px, min-content)
+      grid-gap: 0px
+      padding-bottom: 10px
+    &__logo
+      grid-row: 1
+      grid-column: 1
+      width: 96px
+    &__social
+      &-network
+        grid-row: 2
+        grid-column: 1
+        flex-wrap: wrap
+        align-content: space-between
+        padding-top: 40px
+        padding-bottom: 30px
+    &__title
+      margin: 0px 0px 16px 0px
+      &--inline
+        margin: 0px 43px 20px 0px
+      &--mb-3
+        padding-bottom: 10px
+      &--mb-1
+        margin-bottom: 15px
+    &__icon
+      padding-left: 4px
+      padding-top: 6px
+      &-wrapper
+        min-width: 30px
+    &__item
+      &--mb-2
+        margin-bottom: 22px
+      &--mb-5
+        margin-bottom: 55px
+    &__text
+      margin-bottom: 19px
+    &__additional
+      grid-row: 4
+      grid-column: 1
+      padding-bottom: 28px
+    &__categories
+      grid-row: 5
+      grid-column: 1
+      padding-bottom: 40px
+    &__legal
+      grid-row: 3
+      grid-column: 1
+      padding-bottom: 29px
+      flex-wrap: wrap
+    &__contacts
+      &-details
+        grid-row: 6
+        grid-column: 1
+      &-form
+        grid-row: 7
+        grid-column: 1
+    &__form
+      padding-right: 0
+      flex-direction: row-reverse
+    &__input
+      height: 50px
+    &__message
+      padding-bottom: 39px
+    &__bottom
+      flex-wrap: wrap
+    &-list
+      margin-right: 0
+      margin-bottom: 10px
+      &__item
+        margin-right: 7px
