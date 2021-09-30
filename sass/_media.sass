@@ -199,9 +199,45 @@
   .container
     max-width: 576px
     width: 92%
+  body
+    padding-top: 70px
   .navbar
-    &__search, &-menu, &__user
+    &__user, &__search
+      &--mobile
+        &_hidden
+          display: none
+        &_visible
+          display: flex
+          margin-left: 2px
+    &__user
+      flex-direction: column
+      justify-content: center
+
+    &-bottom
       display: none
+      position: fixed
+      left: 0
+      right: 0
+      bottom: 0
+      top: 78px
+      padding-top: 13px
+      &--visible
+        display: block
+    &-menu
+      flex-direction: column
+      &__item
+        margin-bottom: 20px
+        &--mobile
+          &_visible
+            display: block
+    &--mobile
+      &_fixed
+        position: fixed
+        left: 0
+        top: 0
+        right: 0
+        z-index: 99
+
   .menu
     &-button
       padding: 0
@@ -214,11 +250,16 @@
       border: none
       background-color: #fff
       cursor: pointer
-
       &__line
         width: 16px
         height: 1px
         background-color: $text-color
+  .user
+    &__name
+      &--light
+        color: $light
+        margin-left: 0
+        margin-top: 10px
   .stars
     flex-basis: auto
   .hotel
@@ -367,12 +408,51 @@
     &__image
       display: flex
       align-items: flex-start
+    body
+      padding-top: 78px
   .navbar
-    &__search, &-menu, &__user
-      display: none
     &-top
       padding-bottom: 29px
       padding-top: 28px
+    &__user
+      &--mobile
+        &_hidden
+          display: none
+        &_visible
+          display: flex
+          margin-bottom: 0px
+    &__search
+      &--mobile
+        &_hidden
+          display: none
+        &_visible
+          display: flex
+          margin-bottom: 10px
+    &-bottom
+      display: none
+      position: fixed
+      left: 0
+      right: 0
+      bottom: 0
+      top: 70px
+      &--visible
+        display: block
+    &-menu
+      flex-direction: column
+      &__item
+        margin-bottom: 16px
+        &--mobile
+          &_visible
+            display: block
+            margin-bottom: 27px
+    &--mobile
+      &_fixed
+        position: fixed
+        left: 0
+        top: 0
+        right: 0
+        z-index: 99
+
   .menu
     &-button
       padding: 0
@@ -521,3 +601,6 @@
       margin-bottom: 10px
       &__item
         margin-right: 7px
+  .search
+    &__input
+      width: 245px
