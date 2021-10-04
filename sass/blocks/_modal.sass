@@ -1,0 +1,74 @@
+.modal
+    &__overlay
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        position: fixed
+        background-color: rgba(0, 143, 223, 0.39)
+        z-index: 100
+        visibility: hidden
+        opacity: 0
+        transition: opacity 0.2s
+        &--visible
+            visibility: visible
+            opacity: 1
+    &__dialog
+        position: fixed
+        top: 47%
+        left: 50%
+        max-width: 478px
+        padding: 34px 88px 34px 88px
+        background-color: $dark
+        transform: translate(-50%, -51%)
+        color: $light
+        border-radius: 8px
+        z-index: 101
+        visibility: hidden
+        opacity: 0
+        transition: opacity 0.2s
+        &--visible
+            visibility: visible
+            opacity: 1
+    &__title
+        font-style: normal
+        font-weight: bold
+        font-size: 18px
+        line-height: 23px
+        margin-bottom: 17px
+        text-transform: uppercase
+        text-align: center
+        margin-top: 0px
+    &__close
+        position: absolute
+        right: 18px
+        top: 17px
+        text-decoration: none
+        cursor: pointer
+    &__input
+        width: 100%
+        margin-bottom: 15px
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 15px
+    &__message
+        width: 100%
+        min-height: 123px
+        margin-bottom: 15px
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 15px
+        outline: none
+    &__info
+        font-style: normal
+        font-weight: bold
+        font-size: 12px
+        line-height: 15px
+        color: #E0E0E0
+    &__form
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex-wrap: wrap
