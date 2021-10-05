@@ -213,11 +213,12 @@
         </span>
       </h2>
       <!-- /.newsletter-title -->
-      <form action="#" class="subscribe newsletter__subscribe">
+      <form action="send.php" method="POST" class="subscribe newsletter__subscribe">
         <input
           type="text"
           class="subscribe__input"
           placeholder="Your email address"
+          name="email"
         />
         <button class="subscribe__button">Send
         </button>
@@ -444,20 +445,36 @@
     </div>  
     </footer>
     <div class="modal">
-      <div class="modal__overlay"></div>
+      <div class="modal__overlay" ></div>
       <!-- /.modal__overlay -->
-      <div class="modal__dialog">
+      <div class="modal__dialog" >
         <a href="#" class="modal__close">
           <img src="img/close.svg" alt="icon:close">
         </a>
           <h3 class="modal__title modal__title--mb-1">Booking</h3>
           <form action="send.php" method="POST" class="modal__form">
-              <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" />
-                   <input type="text" class="input modal__input" placeholder="Phone Number*" name="phone" />
-                  <input type="text" class="input modal__input" placeholder="Email*" name="email" />
-                      <textarea style=" resize: none" class="message modal__message" placeholder="Message"
+              <input 
+              type="text" 
+              class="input modal__input"
+              placeholder="Your Full Name*" 
+              name="name" 
+              required
+               />
+              <input 
+              type="text" 
+              class="input modal__input modal__input--phone" 
+              placeholder="Phone Number*" 
+              name="phone" 
+              required/>
+              <input 
+              type="text" 
+              class="input modal__input"
+               placeholder="Email*" 
+               name="email"
+              required/>
+              <textarea style=" resize: none" class="message modal__message" placeholder="Message"
                         name="message"></textarea>
-                 <button class="button modal__button" type="submit">Send</button>
+              <button class="button modal__button" type="submit">Send</button>
               <span class="modal__info">* Required Fields</span>
           </form>
       </div>
@@ -466,6 +483,8 @@
     <!-- /.modal -->
     <script src="js/jquery-3.6.0.min.js"> </script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/parallax.min.js"></script>
