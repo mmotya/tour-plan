@@ -49,6 +49,10 @@ img {
   cursor: pointer;
 }
 
+.invalid {
+  color: #EC1F46;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -847,6 +851,28 @@ template {
   border: none;
   color: #fff;
   cursor: pointer;
+  -webkit-animation: chengeColor 4s;
+          animation: chengeColor 4s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+@-webkit-keyframes chengeColor {
+  0% {
+    background-color: #FA8072;
+  }
+  100% {
+    background-color: #EC1F46;
+  }
+}
+
+@keyframes chengeColor {
+  0% {
+    background-color: #FA8072;
+  }
+  100% {
+    background-color: #EC1F46;
+  }
 }
 
 .map {
@@ -1486,7 +1512,7 @@ a {
 
 .modal__input {
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -1496,12 +1522,16 @@ a {
 .modal__message {
   width: 100%;
   min-height: 123px;
-  margin-bottom: 15px;
+  margin-top: 15px;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
   outline: none;
+}
+
+.modal__button {
+  margin-top: 15px;
 }
 
 .modal__info {

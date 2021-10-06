@@ -64,5 +64,19 @@ $(document).ready(function () {
     $('.date').mask('00/00/0000');
   })
   //обработка форм
-  $(".modal__form").validate();
+  $(".form").each(function () {
+    $(this).validate({
+      errorClass: "invalid",
+      messages: {
+        name: "Please specify your name",
+        email: {
+          required: "We need your email address to contact you",
+          email: "Your email address must be in the format of name@domain.com",
+        },
+        phone:{
+          required: "Phone number required",
+        },
+      },
+    });
+  });
 });

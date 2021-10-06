@@ -419,9 +419,9 @@
           <!-- /.footer__contact-details -->
           <div class="footer__contacts-form">
             <h3 class="footer__title footer__title--mb-1">Send us a message</h3>
-            <form action="send.php" method="POST" class="footer__form">
-              <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name"/>
-              <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone"/>
+            <form action="send.php" method="POST" class="footer__form form">
+              <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required/>
+              <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone" required/>
               <textarea cols="30" rows="10" style=" resize: none" class="message footer__message" placeholder="Message" name="message"></textarea>
               <button class="button footer__button" type="submit">Send</button>
               <span class="footer__info">* Required Fields</span>
@@ -452,7 +452,7 @@
           <img src="img/close.svg" alt="icon:close">
         </a>
           <h3 class="modal__title modal__title--mb-1">Booking</h3>
-          <form action="send.php" method="POST" class="modal__form">
+          <form action="send.php" method="POST" class="modal__form form">
               <input 
               type="text" 
               class="input modal__input"
@@ -482,11 +482,11 @@
     </div>
     <!-- /.modal -->
     <script src="js/jquery-3.6.0.min.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/parallax.min.js"></script>
   </body>
 </html>
