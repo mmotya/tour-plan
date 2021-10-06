@@ -1486,8 +1486,8 @@ a {
   z-index: 101;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 .modal__dialog--visible {
@@ -1519,7 +1519,7 @@ a {
   margin-top: 15px;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 15px;
 }
 
@@ -2459,6 +2459,18 @@ a {
   }
   .modal__dialog {
     min-width: 280px;
+  }
+  .modal__input {
+    height: 39px;
+  }
+  .modal__message {
+    min-height: 110px;
+  }
+  .modal__title {
+    margin-bottom: 0px;
+  }
+  .invalid {
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=style.css.map */
