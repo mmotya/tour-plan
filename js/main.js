@@ -59,10 +59,8 @@ $(document).ready(function () {
       modalOverlay.removeClass("modal__overlay--visible");
       modalDialog.removeClass("modal__dialog--visible");
     }
-  })
-  $(".modal__form").ready(function(){
-    $('.date').mask('00/00/0000');
-  })
+  });
+
   //обработка форм
   $(".form").each(function () {
     $(this).validate({
@@ -77,6 +75,25 @@ $(document).ready(function () {
           required: "Phone number required",
         },
       },
+    });
+  });
+  
+  $(".form").ready(function(){
+     $('.footer__input--phone').mask('+7 (ZZZ) ZZZ-ZZ-ZZ' , {
+        translation: {
+          'Z': {
+          pattern: /[0-9]/, optional: true
+        }
+      }
+    });
+  });
+  $(".form").ready(function(){
+     $('.modal__input--phone').mask('+7 (ZZZ) ZZZ-ZZ-ZZ' , {
+        translation: {
+          'Z': {
+          pattern: /[0-9]/, optional: true
+        }
+      }
     });
   });
 });

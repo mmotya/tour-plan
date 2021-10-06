@@ -10,17 +10,26 @@ $phone = $_POST['phone'];
 $message = $_POST['message'];
 $email = $_POST['email'];
 
+$title = "New appeal Best Tour Plan";
+$body = "
+<h2>New appeal</h2>
+<b>Name:</b> $name<br>
+<b>Phone:</b> $phone<br>
+<b>Email:</b> $email<br><br>
+<b>Messege:</b><br>$text
+";
+
 // Формирование самого письма
 if(isset($_POST['email'])){
     // если есть что-то в $_POST['email']
-    $title = 'Новое обращение Best Tour Plan';
-    $body = '<h2>Новое обращение</h2> <b>Почта:</b> ' . $_POST['email'];
+    $title = 'New appeal Best Tour Plan';
+    $body = '<h2>New appeal </h2> <b>Email:</b> ' . $_POST['email'];
 } else {
     // если нет, отправлена форма с телефоном и пр.
-    $title = 'Новое обращение Best Tour Plan';
-    $body ='<h2>Новое обращение</h2> <b>Имя:</b> ' . $_POST['name'] . ' <br />';
-    $body.= '<b>Номер:</b> ' . $_POST['phone']. ' <br />';
-    $body.= '<b>Сообщение:</b> ' .$_POST['message']. ' <br />' ;
+    $title = 'New appeal Best Tour Plan';
+    $body ='<h2>New appeal </h2> <b>Name:</b> ' . $_POST['name'] . ' <br />';
+    $body.= '<b>Phone:</b> ' . $_POST['phone']. ' <br />';
+    $body.= '<b>Messege:</b> ' .$_POST['message']. ' <br />' ;
 };
 
 // Настройки PHPMailer
