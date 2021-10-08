@@ -9,28 +9,40 @@ $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
 $email = $_POST['email'];
+$subscribe = $_POST['subscribe'];
+$form = $_POST['form'];
+$booking = $_POST['booking'];
+$thankyou = $_POST['thankyou'];
 
-$title = "New appeal Best Tour Plan";
-$body = "
-<h2>New appeal</h2>
-<b>Name:</b> $name<br>
-<b>Phone:</b> $phone<br>
-<b>Email:</b> $email<br><br>
-<b>Messege:</b><br>$text
-";
 
 // Формирование самого письма
-if(isset($_POST['email'])){
+if($form == 'booking'){
     // если есть что-то в $_POST['email']
-    $title = 'New appeal Best Tour Plan';
-    $body = '<h2>New appeal </h2> <b>Email:</b> ' . $_POST['email'];
-} else {
+   $title = "New appeal Best Tour Plan";
+   $body = "
+   <h2>New appeal</h2>
+   <b>Name:</b> $name<br>
+   <b>Phone:</b> $phone<br>
+   <b>Email:</b> $email<br><br>
+   <b>Messege:</b><br>$message
+   ";
+} elseif ($form == 'subscription') {
     // если нет, отправлена форма с телефоном и пр.
-    $title = 'New appeal Best Tour Plan';
-    $body ='<h2>New appeal </h2> <b>Name:</b> ' . $_POST['name'] . ' <br />';
-    $body.= '<b>Phone:</b> ' . $_POST['phone']. ' <br />';
-    $body.= '<b>Messege:</b> ' .$_POST['message']. ' <br />' ;
-};
+    $title = "New subscription to the Best Tour Plan";
+    $body ="
+    <h2>New subscription</h2>
+    <b>Email:</b> $subscribe<br><br>
+";
+} elseif ($form == 'thankyou') {
+    // если нет, отправлена форма с телефоном и пр.
+    $title = "New appeal Best Tour Plan";
+    $body ="
+    <h2>New appeal</h2>
+    <b>Name:</b> $name<br>
+    <b>Phone:</b> $phone<br>
+    <b>Messege:</b><br>$message
+    ";
+}
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -67,4 +79,10 @@ else {$result = "error";}
 }
 
 // Отображение результата
-header('Location: thankyou.html');
+if ($form == 'booking') {
+    header('Location: thankyou.html');
+}elseif ($form == 'subscription') {
+    header('Location: subscribe.html');
+}elseif ($form == 'thankyou') {
+    header('Location: thankyou.html');
+}
