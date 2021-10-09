@@ -55,11 +55,11 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
-    $mail->Username   = 'mmotya.mmotya@mail.ru'; // Логин на почте
-    $mail->Password   = 'UcAJgenFFy5pFwACrZb3'; // Пароль на почте
+    $mail->Username   = 'fkevdin@mail.ru'; // Логин на почте
+    $mail->Password   = 'R8VcrU6wU8hLKPRufVFt'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('mmotya.mmotya@mail.ru', 'Мотя Виноградова'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('fkevdin@mail.ru', 'Федор Кевдин'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('kevdina@yandex.ru');  
