@@ -36,8 +36,11 @@ $(document).ready(function () {
 
   var modalButton = $("[data-toggle=modal]");
   var closeModalButton = $(".modal__close");
+  var closeModalBackground = $(".modal__overlay");
+
   modalButton.on("click", openModal);
   closeModalButton.on("click", closeModal);
+  closeModalBackground.on("click", closeModal);
 
   function openModal() {
     var modalOverlay = $(".modal__overlay");
@@ -60,6 +63,22 @@ $(document).ready(function () {
       modalDialog.removeClass("modal__dialog--visible");
     }
   });
+  // Закрытие модального окна при клике вне его контентной области
+  $('.modal').mouseup(function (e) {
+   let  modalDialog = $(".modal__dialog");
+   if (!modalDialog.is(e.target) && modalDialog.has(e.target).length === 0) {
+     $(this).removeClass('modal__dialog--visible');
+   }
+  });
+    $('.modal').mouseup(function (e) {
+   let  modalDialog = $(".modal__dialog");
+   if (!modalDialog.is(e.target) && modalDialog.has(e.target).length === 0) {
+     $(this).removeClass('modal__dialog--visible');
+   }
+  });
+
+
+
 
   //обработка форм
   $(".form").each(function () {
